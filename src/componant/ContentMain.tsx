@@ -13,7 +13,7 @@ export default function ContentMain() {
 
             <Info />
 
-            <ButtonMore />
+            
         </main>
     )
 }
