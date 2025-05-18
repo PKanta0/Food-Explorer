@@ -1,17 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Sidebar from './componant/Sidebar'
 import ContentMain from './componant/ContentMain'
 
-type Props = {}
 
-export default function Content({}: Props) {
+
+
+
+
+export default function Content() {
+
   return (
       <div className="flex flex-1 overflow-hidden">
 
           
-          <Sidebar/>
+      <Sidebar />
 
-          <ContentMain/>
+      <ContentMain  />
           
 
       </div>

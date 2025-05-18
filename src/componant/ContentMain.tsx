@@ -1,19 +1,19 @@
 import React from 'react'
 import Info from '../ContentComponant/Info'
 import ButtonMore from '../ContentComponant/ButtonMore'
+import { useCategory } from '../CategoryContext'
 
-type Props = {}
-
-export default function ContentMain({}: Props) {
-  return (
+export default function ContentMain() {
+    const { selectedCategory } = useCategory() 
+    return (
         <main className="flex-1 p-6 overflow-y-auto">
-
-            <h2 className="text-2xl font-semibold text-gray-800 mb-6">MENU</h2>
+            <h2 className="text-2xl font-semibold text-gray-800 mb-6">
+                MENU: {selectedCategory}
+            </h2>
 
             <Info />
 
             <ButtonMore />
-
         </main>
     )
 }

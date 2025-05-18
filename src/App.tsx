@@ -1,19 +1,25 @@
 import React,{useState} from 'react' 
 import Header from './Header'
 import Content from "./content"
+import { CategoryProvider } from './CategoryContext'
+
+
 import './App.css'
 
 
-function App() {
-  
-  return (
-    <div className="flex flex-col h-screen bg-gray-50">
-  
-      <Header />
 
-      <Content/>
+function App() {
+
+  const [selectedCategory, setSelectedCategory] = useState('Seafood')
   
-  </div>
+
+  return (
+    <CategoryProvider>
+      <div className="flex flex-col h-screen bg-gray-50">
+        <Header />
+        <Content />
+      </div>
+    </CategoryProvider>
   )
 }
 
