@@ -1,4 +1,3 @@
-import React from 'react'
 import type { Food } from "../food/Food"
 
 type Props = {
@@ -7,7 +6,7 @@ type Props = {
   }
 
 
-export default function ButtonMore({ meals, onLoadMore }: Props) {
+export default function ButtonMore({onLoadMore }: Props) {
   return (
       <div className="flex justify-center mt-6">
           <button 

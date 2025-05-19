@@ -1,4 +1,3 @@
-import React,{useState} from 'react' 
 import Header from './Header'
 import Content from "./content"
 import { CategoryProvider } from './CategoryContext'
@@ -10,8 +9,6 @@ import './App.css'
 
 function App() {
 
-  const [selectedCategory, setSelectedCategory] = useState('Seafood')
-  
 
   return (
     <CategoryProvider>
