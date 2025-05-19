@@ -1,6 +1,4 @@
-import React from 'react'
 import Info from '../ContentComponant/Info'
-import ButtonMore from '../ContentComponant/ButtonMore'
 import { useCategory } from '../CategoryContext'
 
 export default function ContentMain() {
