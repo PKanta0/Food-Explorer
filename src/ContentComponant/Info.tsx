@@ -4,8 +4,14 @@ import { useCategory } from '../CategoryContext'
 import type { Meal } from '../food/Food'
 
 export default function Info() {
-  const { selectedCategory } = useCategory()
-  const [meals, setMeals] = useState<Meal[]>([])
+  const [ meals, setMeals] = useState<Meal[]>([])
+  const { selectedCategory, searchTerm } = useCategory()
+
+  const filteredMeals = meals.filter(meal =>
+    searchTerm.length < 2
+      ? true
+      : meal.strMeal.toLowerCase().includes(searchTerm.toLowerCase())
+  )
 
   useEffect(() => {
     const fetchMeals = async () => {
