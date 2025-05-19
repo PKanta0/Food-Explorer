@@ -23,7 +23,7 @@ export default function Sidebar() {
     }, [])
 
     return (
-        <aside className="w-[15%] bg-white border-r border-gray-200 p-6 overflow-y-auto">
+        <aside className="w-39 sm:w-60 md:w-55  bg-white border-r border-gray-200 p-6 overflow-y-auto">
             <nav className="space-y-3 text-gray-700 font-medium text-left">
                 <div className="hover:text-blue-600 cursor-pointer" onClick={() => setSelectedCategory('random')}>
                     ⭐ Menu Today
